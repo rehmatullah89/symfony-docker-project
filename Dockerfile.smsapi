@@ -1,0 +1,4 @@
+# run mock SMS API server
+FROM python:3.9
+ADD SMS_API.py .
+CMD [ "python", "./SMS_API.py" ]

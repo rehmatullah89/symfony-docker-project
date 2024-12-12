@@ -1,0 +1,11 @@
+version: '3'
+services:
+  smsapi:
+    image: python:3.9
+    build:
+      dockerfile: Dockerfile.smsapi
+    volumes:
+      - ./SMS_API.py:/app/SMS_API.py
+    command: python /app/SMS_API.py 0.0.0.0 8585
+    ports:
+      - "8585:8585"
